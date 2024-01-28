@@ -1,9 +1,9 @@
+install.packages("readr")
 library("readr")
 
 data <- read_csv("TrainingUnclean.csv")
 
 clean_text <- function(text) {
-  # Remove punctuation
   text <- tolower(text)
   text <- gsub("[^a-z0-9 ]", "", text)
   return(text)
